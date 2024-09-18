@@ -1,80 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Time tracking dashboard</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Time tracking dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <main class="dashboard">
+      <div class="dashboard__header">
+        <div class="dashboard__user">
+          <img
+            src="./images/image-jeremy.png"
+            alt="Jeremy Robson"
+            class="dashboard__user-avatar"
+          />
+          <div class="dashboard__user-wrapper">
+            <p class="dashboard__user-report">Report for</p>
+            <h1 class="dashboard__user-name">Jeremy Robson</h1>
+          </div>
+        </div>
+        <nav class="dashboard__nav">
+          <ul class="dashboard__nav-list">
+            <li class="dashboard__nav-item active">Daily</li>
+            <li class="dashboard__nav-item">Weekly</li>
+            <li class="dashboard__nav-item">Monthly</li>
+          </ul>
+        </nav>
+      </div>
 
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <div class="dashboard__content">
+        <article class="dashboard__card dashboard__card--work">
+          <div class="dashboard__card-top">
+            <img src="./images/icon-work.svg" alt="Work icon" class="dashboard__card-icon">
+          </div>
+          <div class="dashboard__card-body">
+            <header class="dashboard__card-header">
+              <h2 class="dashboard__card-title">Work</h2>
+              <img
+                src="./images/icon-ellipsis.svg"
+                alt="Ellipsis icon"
+                class="dashboard__card-ellipses"
+              />
+            </header>
+            <div class="dashboard__card-timeframes">
+              <div class="dashboard__timeframe">
+                <p class="dashboard__timeframe-current">5hrs</p>
+                <p class="dashboard__timeframe-previous">Previous - 7hrs</p>
+              </div>
+              <!--
+              <div class="dashboard__timeframe dashboard__timeframe--weekly">
+                <p class="dashboard__timeframe-current">32hrs</p>
+                <p class="dashboard__timeframe-previous">Previous - 36hrs</p>
+              </div>
+              <div class="dashboard__timeframe dashboard__timeframe--monthly">
+                <p class="dashboard__timeframe-current">103hrs</p>
+                <p class="dashboard__timeframe-previous">Previous - 128hrs</p>
+              </div>
+              -->
+            </div>
+          </div>
+    
+        </article>
+      </div>
+    </main>
+  </body>
 </html>
