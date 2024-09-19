@@ -76,8 +76,8 @@ body {
 }
 .dashboard {
   background-color: var(--very-dark-blue);
-  width: 43.9rem;
-  padding: 4.8rem 3.2rem;
+  max-width: 80%;
+  padding: 8rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
@@ -99,7 +99,7 @@ body {
   gap: 2.4rem;
 }
 .dashboard__user-avatar {
-  width: 30%;
+  width: 25%;
   height: auto;
   border: 0.2rem solid white;
   border-radius: 100%;
@@ -112,7 +112,7 @@ body {
   font-size: 2.4rem;
 }
 .dashboard__nav-list {
-  padding: 0;
+  padding: 0 3.2rem;
   list-style: none;
   display: flex;
   justify-content: space-evenly;
@@ -121,7 +121,7 @@ body {
   color: var(--pale-blue);
   font-size: 1.8rem;
   text-align: center;
-  padding: 3.2rem 0;
+  padding: 2rem 0;
   cursor: pointer;
   flex: 1;
 }
@@ -133,18 +133,48 @@ body {
 }
 
 /* Card styles */
+.dashboard__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 
 .dashboard__card {
-  background-color: var(--dark-blue);
-  padding: 3.2rem;
+  overflow: hidden;
   border-radius: 15px;
-  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-clip: padding-box;
+}
+
+.dashboard__card-top {
+  height: 3.6rem;
+  display: flex;
+}
+
+.dashboard__card-body {
+  background-color: var(--dark-blue);
+  padding: 3.22rem;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.dashboard__card-body:hover {
+  background-color: hsl(236, 41%, 34%);
+}
+
+.dashboard__card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .dashboard__card-title {
   font-size: 1.8rem;
+  font-weight: 400;
+}
+.dashboard__card-ellipses {
+  cursor: pointer;
 }
 .dashboard__card-timeframes {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 .dashboard__card-header,
 .dashboard__timeframe {
@@ -153,8 +183,91 @@ body {
   align-items: center;
 }
 .dashboard__timeframe-current {
-  font-size: 3.2rem;
+  font-size: 3.6rem;
+  font-weight: 300;
 }
 .dashboard__timeframe-previous {
+  font-size: 1.4rem;
   color: var(--pale-blue);
+}
+.dashboard__card--work {
+  background-color: var(--light-red-work);
+}
+.dashboard__card--work .dashboard__card-top {
+  background-color: var(--light-red-work);
+  background: url(./images/icon-work.svg) no-repeat right;
+}
+.dashboard__card--play {
+  background-color: var(--soft-blue-play);
+}
+.dashboard__card--play .dashboard__card-top {
+  background-color: var(--soft-blue-play);
+  background: url(./images/icon-play.svg) no-repeat right;
+}
+.dashboard__card--study {
+  background-color: var(--light-red-study);
+}
+.dashboard__card--study .dashboard__card-top {
+  background-color: var(--light-red-study);
+  background: url(./images/icon-study.svg) no-repeat right;
+}
+.dashboard__card--exercise {
+  background-color: var(--lime-green-exercise);
+}
+.dashboard__card--exercise .dashboard__card-top {
+  background-color: var(--lime-green-exercise);
+  background: url(./images/icon-exercise.svg) no-repeat right;
+}
+.dashboard__card--social {
+  background-color: var(--violet-social);
+}
+.dashboard__card--social .dashboard__card-top {
+  background-color: var(--violet-social);
+  background: url(./images/icon-social.svg) no-repeat right;
+}
+.dashboard__card--self-care {
+  background-color: var(--soft-orange-self-care);
+}
+.dashboard__card--self-care .dashboard__card-top {
+  background-color: var(--soft-orange-self-care);
+  background: url(./images/icon-self-care.svg) no-repeat right;
+}
+
+/* Break Points */
+/*
+# tablet    ≥ 768px = 48rem
+# desktop	≥ 992px = 62rem
+*/
+
+/* Responisve styles for desktop view */
+@media (min-width: 48rem) {
+  .dashboard {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .dashboard__header {
+    flex: 1;
+    min-width: 25%;
+  }
+  .dashboard__user {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dashboard__nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dashboard__content {
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .dashboard__card {
+    width: calc(33% - 2rem);
+  }
+  .dashboard__timeframe {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
 }

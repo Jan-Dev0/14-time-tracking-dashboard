@@ -20,7 +20,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
   </head>
   <body>
     <main class="dashboard">
@@ -38,47 +38,14 @@
         </div>
         <nav class="dashboard__nav">
           <ul class="dashboard__nav-list">
-            <li class="dashboard__nav-item active">Daily</li>
-            <li class="dashboard__nav-item">Weekly</li>
-            <li class="dashboard__nav-item">Monthly</li>
+            <li class="dashboard__nav-item" data-timeframe="daily">Daily</li>
+            <li class="dashboard__nav-item" data-timeframe="weekly">Weekly</li>
+            <li class="dashboard__nav-item" data-timeframe="monthly">Monthly</li>
           </ul>
         </nav>
       </div>
 
-      <div class="dashboard__content">
-        <article class="dashboard__card dashboard__card--work">
-          <div class="dashboard__card-top">
-            <img src="./images/icon-work.svg" alt="Work icon" class="dashboard__card-icon">
-          </div>
-          <div class="dashboard__card-body">
-            <header class="dashboard__card-header">
-              <h2 class="dashboard__card-title">Work</h2>
-              <img
-                src="./images/icon-ellipsis.svg"
-                alt="Ellipsis icon"
-                class="dashboard__card-ellipses"
-              />
-            </header>
-            <div class="dashboard__card-timeframes">
-              <div class="dashboard__timeframe">
-                <p class="dashboard__timeframe-current">5hrs</p>
-                <p class="dashboard__timeframe-previous">Previous - 7hrs</p>
-              </div>
-              <!--
-              <div class="dashboard__timeframe dashboard__timeframe--weekly">
-                <p class="dashboard__timeframe-current">32hrs</p>
-                <p class="dashboard__timeframe-previous">Previous - 36hrs</p>
-              </div>
-              <div class="dashboard__timeframe dashboard__timeframe--monthly">
-                <p class="dashboard__timeframe-current">103hrs</p>
-                <p class="dashboard__timeframe-previous">Previous - 128hrs</p>
-              </div>
-              -->
-            </div>
-          </div>
-    
-        </article>
-      </div>
+      <div class="dashboard__content"></div>
     </main>
   </body>
 </html>
